@@ -48,7 +48,7 @@ $$;
 
 ---
 
-## 2. Site verification gate
+## 2. A business rule enforced in the database
 
 **Source:** `supabase/migrations/20260802000000_init.sql:265-282` (22 lines: 18-line original + 4-line gloss comment)
 
@@ -86,7 +86,7 @@ create trigger trg_site_verification
 
 ---
 
-## 3. Anonymous pool view
+## 3. Anonymised opportunity pool
 
 **Source:** `supabase/migrations/20260814000000_pool_hide_own_listings.sql:19-39` (30 lines: 6-line comment + 24-line view)
 
@@ -134,7 +134,7 @@ where r.status = 'acik' -- 'acik' = the "open" listing status, kept as in the re
 
 ---
 
-## 4. Match scoring
+## 4. Tiered confidence in product matching
 
 **Source:** `lib/matching/scoring.ts:24-32,88-108` (37 lines)
 
@@ -187,7 +187,7 @@ function scoreProduct(o: OfferRow): { score: number; note: string } {
 
 ---
 
-## 5. Money math
+## 5. Money arithmetic
 
 **Source:** `lib/commission.ts:1-31` (30 lines)
 
@@ -233,7 +233,7 @@ export function percentageToAmount(totalValue: number, percentage: number): numb
 
 ---
 
-## 6. Function access-control test
+## 6. Access coverage as a test
 
 **Source:** `tests/access/function-grant-coverage.test.ts` (curated excerpt, 40 of 351 lines)
 
